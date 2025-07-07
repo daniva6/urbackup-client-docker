@@ -34,4 +34,3 @@ RUN chmod +x /usr/bin/entrypoint.sh
 # Only files in /backup will be backed up per default
 VOLUME [ "/backup" ]
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
-CMD ["--internet-only"]
