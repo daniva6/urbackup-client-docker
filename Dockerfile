@@ -24,8 +24,8 @@ ADD ${URL} /root/install.sh
 RUN sh /root/install.sh &&\
         rm -f /root/install.sh &&\
 		mkdir -p /backup &&\        
-        ( [ ! -e /etc/default/urbackupclient ] || sed -i 's/INTERNET_ONLY=false/INTERNET_ONLY=true/' /etc/default/urbackupclient ) &&\
-        ( [ ! -e /etc/sysconfig/urbackupclient ] || sed -i 's/INTERNET_ONLY=false/INTERNET_ONLY=true/' /etc/sysconfig/urbackupclient ) &&\
+        ( [ ! -e /etc/default/urbackupclient ] || sed -i 's/INTERNET_ONLY=true/INTERNET_ONLY=false/' /etc/default/urbackupclient ) &&\
+        ( [ ! -e /etc/sysconfig/urbackupclient ] || sed -i 's/INTERNET_ONLY=true/INTERNET_ONLY=false/' /etc/sysconfig/urbackupclient ) &&\
         mkdir -p /backup
 		
 # Making entrypoint-script executable
